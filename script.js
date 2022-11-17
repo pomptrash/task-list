@@ -41,8 +41,8 @@ function addTaskButtonClick(){
     const newTaskContainer = document.createElement('div')
     newTaskContainer.classList.add('task-item')
     const newTaskItem = document.createElement('h3')
-    newTaskItem.addEventListener('click', function(ev){
-        ev.target.classList.add('completed')
+    newTaskItem.addEventListener('click', function(){
+        newTaskItem.classList.add('completed')
 
         const checkIcon = document.createElement('i')
         checkIcon.className = 'bi bi-check'

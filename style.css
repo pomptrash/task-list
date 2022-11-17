@@ -126,6 +126,7 @@ body {
     margin: 10px;
     box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.050);
     padding: 10px;
+    cursor: pointer;
 }
 .task-item > i {
     background-color: #19BF59;
@@ -134,7 +135,7 @@ body {
     padding: 5px;
     border-radius: 10px;
 }
-.task-item i:hover {
+.task-item > i:hover {
     background-color: #18aa50;
 }
 
