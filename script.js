@@ -18,14 +18,12 @@ function inputTaskValidate(){
 
 function tasksCompletedCounting(){
     amountCompleted.innerText = taskContainer.getElementsByClassName('completed').length
-    console.log(amountCompleted)
 }
-
 
 function addTaskButtonClick(){
 
     if (!inputTaskValidate()){
-        return null
+        return newTaskInput.classList.add('error')
     }
 
     const newTaskContainer = document.createElement('div')
@@ -41,10 +39,9 @@ function addTaskButtonClick(){
         if (CheckIconCount < 1){
             newTaskItem.appendChild(checkIcon)
         }
-
         tasksCompletedCounting()
     })
-
+    
     const deleteTaskIcon = document.createElement('i')
     deleteTaskIcon.className = 'bi bi-trash'
     deleteTaskIcon.addEventListener('click', function(){
@@ -64,6 +61,7 @@ function addTaskButtonClick(){
     newTaskInput.focus()
     tasksAmountCounting()
     tasksCompletedCounting()
+    newTaskInput.classList.remove('error')
 
     
 }

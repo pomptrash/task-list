@@ -54,6 +54,12 @@ body {
     outline: none;
     border: 2px solid #19BF59;
 }
+.error {
+    border: 2px solid red !important;
+}
+.error::placeholder{
+    color: red !important;
+}
 
 
 .new-task-container .new-task-button {
@@ -87,6 +93,20 @@ body {
     margin: auto;
     overflow-y: auto;
 }
+.task-container::-webkit-scrollbar{
+    width: 10px;
+}
+.task-container::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: white;
+}
+.task-container::-webkit-scrollbar-thumb {
+    background-color: #19BF59;
+    border-radius: 10px;
+
+}
+
+
 .task-item {
     display: flex;
     flex-direction: row;
@@ -96,6 +116,7 @@ body {
     box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.090);
     padding: 10px;
     cursor: pointer;
+    color: #19BF59;
 }
 .task-item > i {
     background-color: #19BF59;
