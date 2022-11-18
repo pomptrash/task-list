@@ -12,6 +12,10 @@ function tasksAmountCounting (){
     amount.innerText = taskContainer.getElementsByClassName('task-item').length
 }
 
+function inputTaskValidate(){
+    return newTaskInput.value.trim().length > 0
+}
+
 function tasksCompletedCounting(){
     amountCompleted.innerText = taskContainer.getElementsByClassName('completed').length
     console.log(amountCompleted)
@@ -19,6 +23,11 @@ function tasksCompletedCounting(){
 
 
 function addTaskButtonClick(){
+
+    if (!inputTaskValidate()){
+        return null
+    }
+
     const newTaskContainer = document.createElement('div')
     newTaskContainer.classList.add('task-item')
     const newTaskItem = document.createElement('h3')
@@ -66,5 +75,3 @@ newTaskInput.addEventListener('keypress', function(ev){
         addTaskButtonClick()
     }
 })
-
-newTaskInput.addEventListener('change', verifyTaskInputChange)
