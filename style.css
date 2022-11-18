@@ -42,37 +42,6 @@ body {
     height: 30%;
 }
 
-
-/********** error alert *********/
-.error {
-    border: 1px solid red !important; 
-    padding: 5px;
-}
-.error::placeholder {
-    color: red !important;
-}
-.errorAlert {
-    width: 30%;
-    height: 5rem;
-    background-color: rgba(255, 0, 0, 0.448);
-    color: white;
-    font-size: 0.9em;
-    border-radius: 10px 10px 10px 0px;
-    padding: 10px;
-    display: none;
-    position: absolute;
-    top: 2rem;
-}
-.errorAlert * {
-    color: rgb(250, 250, 250, 0.500);
-}
-.errorAlert h1 {
-    font-size: 1.5em;
-}
-/********** ^error alert *********/
-
-
-
 .new-task-container .new-task-input {
     padding: 5px;
     border-radius: 4px;
@@ -124,7 +93,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 10px;
-    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.050);
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.090);
     padding: 10px;
     cursor: pointer;
 }

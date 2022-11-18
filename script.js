@@ -8,19 +8,6 @@ const yearSpan = document.querySelector('#year-span')
 const yearDate = new Date().getFullYear()
 yearSpan.innerText = yearDate
 
-function validateInputTask(){
-    return newTaskInput.value.trim().length > 0
-}
-
-function verifyTaskInputChange(){
-    const IsInputValid = validateInputTask()
-    if (IsInputValid){
-        const error = document.querySelector('.errorAlert')
-        error.style.display = 'none'
-        return newTaskInput.classList.remove('error')
-    }
-}
-
 function tasksAmountCounting (){
     amount.innerText = taskContainer.getElementsByClassName('task-item').length
 }
@@ -32,12 +19,6 @@ function tasksCompletedCounting(){
 
 
 function addTaskButtonClick(){
-    if (!validateInputTask()){
-        const error = document.querySelector('.errorAlert')
-        error.style.display = 'block'
-        return newTaskInput.classList.add('error')
-    }
-
     const newTaskContainer = document.createElement('div')
     newTaskContainer.classList.add('task-item')
     const newTaskItem = document.createElement('h3')
@@ -74,6 +55,8 @@ function addTaskButtonClick(){
     newTaskInput.focus()
     tasksAmountCounting()
     tasksCompletedCounting()
+
+    
 }
 
 newTaskButton.addEventListener('click', addTaskButtonClick)
@@ -84,4 +67,4 @@ newTaskInput.addEventListener('keypress', function(ev){
     }
 })
 
-newTaskInput.addEventListener('change', () => verifyTaskInputChange())
+newTaskInput.addEventListener('change', verifyTaskInputChange)
