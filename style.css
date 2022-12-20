@@ -108,7 +108,6 @@ body {
 
 }
 
-
 .task-item {
     display: flex;
     flex-direction: row;
@@ -119,7 +118,14 @@ body {
     padding: 10px;
     cursor: pointer;
     color: #19BF59;
+
 }
+.task-item h3 {
+    width: 87%;
+    overflow-wrap: break-word; 
+    
+}
+
 .task-item > i {
     background-color: #19BF59;
     color: white;
@@ -131,15 +137,28 @@ body {
     background-color: #18aa50;
 }
 
-
 .completed {
     text-decoration: line-through;
     color: gray;
-    border-color: green !important;
+    border: 1px solid #19BF59 !important;
     display: flex;
     gap: 5px;
     justify-content: center;
     align-items: center;
+    position: relative;
+    opacity: 50%;
+}
+
+.completed::before{
+    content: '✓completed';
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    padding-right: 3px;
+    font-weight: 700;
+    font-size: 0.8em;
+    color: #19BF59;
+    background-color: white;
 }
 
 footer {

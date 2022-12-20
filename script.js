@@ -29,16 +29,8 @@ function addTaskButtonClick(){
     const newTaskContainer = document.createElement('div')
     newTaskContainer.classList.add('task-item')
     const newTaskItem = document.createElement('h3')
-    newTaskItem.addEventListener('click', function(){
-        newTaskItem.classList.add('completed')
-
-        const checkIcon = document.createElement('i')
-        checkIcon.className = 'bi bi-check'
-
-        const CheckIconCount = newTaskItem.getElementsByClassName('bi bi-check').length
-        if (CheckIconCount < 1){
-            newTaskItem.appendChild(checkIcon)
-        }
+    newTaskContainer.addEventListener('click', function(){
+        newTaskContainer.classList.toggle('completed')
         tasksCompletedCounting()
     })
     
